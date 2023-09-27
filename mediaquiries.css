@@ -271,5 +271,83 @@
 
   
   }
+  @media screen and (max-width: 430px) {
+    html, body {
+      overflow-x: hidden;
+    }
+    body {
+      position: relative;
+      
+    }
+      #hamburger-nav{
+        gap: 0;
+      }
+        .section__text{
+          text-align: center;
+          padding-left: 1rem;
+         
+        }
+        .section__text__home {
+          text-align:center;
+          font-size: .9rem;
+          color: rgb(34, 25, 32);
+          padding-left: -1rem;
+        }
+        .section__text__p2{
+          padding-left: 0.5rem;
+        }
+        .Title{
+          align-items: center;
+          padding-left:16.5% ;
+          gap: 1rem;
+        
+        }
+        .Title h1{
+          font-size: 2.5rem;
+          text-align: center;
+          
+          
+        }
+        .Title h2{
+          font-size: 2.5rem;
+
+          
+        }
+        .btn {
+          width: 5rem;
+          font-size: 0.4rem; /* 9px converted to rem */
+        }
+    
+        .btn-container{
+          padding-left: 1rem;
+        }
+        .prof__section__pic-container{
+          height: 15rem;
+          width: 15rem;
+          padding-left: 18%;
+          padding-top: 3%;
+        }
+        #hamburger-nav {
+          display: block;
+        }
+        .hamburger-menu{
+          position:fixed;
+          padding-left: 22rem;
+          padding-top: 1.5%;
+        }
+       
+        .about-pic{
+          border-radius: 2rem;
+          margin-top: 25% ;
+          margin-right: -17rem;
+          height:11rem;
+          width: 11rem;
+          border-radius: 1;
+        }
+     
+    
+  
+    
+    }
   }
   
