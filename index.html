@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cagang, Lorena Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaquiries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+        <div class="logo">
+          <a href="https://www.instagram.com/lorenacagang/" target="_blank">
+            <img src="./assets/instagram.png" width="35" height="35" alt="Instagram" />
+          </a>
+          <a href="https://www.facebook.com/lorenatizoncagang/" target="_blank">
+            <img src="./assets/facebook.png" width="35" height="35" alt="Facebook" />
+          </a>
+          <a href="https://github.com/LorenaCagang" target="_blank">
+            <img src="./assets/github.png" width="35" height="35" alt="GitHub" />
+          </a>
+      </div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contacts</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo"></div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contacts</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__text">
+        <p class="section__text__home">Hello, I am</p>
+        <div class="Title">
+        <h1>Lorena</h1>
+        <h2>Cagang</h2>
+        </div>
+        <p class="section__text__p2">Information Systems Student</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume.pdf')"
+          >
+            Download CV
+          </button>
+        </div>
+        </div>
+      </div>
+      <div class="prof__section__pic-container">
+        <img
+        src="./assets/profile.png"
+        alt="Profile picture" />
+      </div>
+      
+    </section>
+    <section id="about">
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="About Picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <p class="section__text__p1">Get to Know More</p>
+          <h1 class="title">About Me</h1>
+          <p class = "abtme">Hello there! I'm Lorena Rose T. Cagang, a 19-year-old college student  currently pursuing Bachelor of Science in Information Systems at Technological University of the Philippines. My academic journey has equipped me with a diverse skill set. I thrive on the logic and creativity required to develop innovative solutions that streamline processes and enhance efficiency.
+            Beyond academics, I'm an avid learner, always eager to stay updated with the latest trends and advancements in the tech industry. I find inspiration in every project I undertake and look forward to the dynamic opportunities that lie ahead.</p>
+          <div class="subtitle">
+            <p class="sub_1 sub_experience">Experience</p>
+            <div class="content content_experience">Learned Html in Senior High <br> <br>Learned C and C++ in first year of College <br><br> Learned Python in Second Year College</div>
+            
+            <p class="sub_1 sub_education">Education</p>
+            <div class="content content_education">Tenement elementary school(2011-2012) <br><br>
+              Western bicutan national high(2017-2018)<br><br>
+              Technological university of the philippines
+              Bachelor of Science in Information Systems</div>
+        </div>
+         <div class="iconss">
+            <img src="./assets/experience.png" alt="Experience" width="120" height="120" class="exp_icon"/>
+            <img src="./assets/education.png" alt="Education" width="120" height="120" class="educ_icon"/>
+          </div>
+          
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__Exp">Explore My</p>
+      <h1 class="title_exp">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Programming Proficiency</h2>
+            <div class="skill">
+                <div class="skill-name">HTML (3rd year College)</div>
+                <div class="skill-bar"></div>
+                <div class="skill-per" per="55%" style="max-width:55%"></div>
+                </div>
+             
+                <div class="skill">
+                  <div class="skill-name">C (1st and 2nd Year College)</div>
+                  <div class="skill-bar"></div>
+                  <div class="skill-per" per="50%" style="max-width:50%"></div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-name">C++ (2nd Year College)</div>
+                    <div class="skill-bar"></div>
+                    <div class="skill-per" per="53%" style="max-width:53%"></div>
+                    </div>
+                    <div class="skill">
+                      <div class="skill-name">PYTHON (2nd Year College)</div>
+                      <div class="skill-bar"></div>
+                      <div class="skill-per" per="45%" style="max-width:45%"></div>
+                      </div>
+            </div>
+          </div>
+            
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section class="projects section" id="projects">
+      <h2 class="section__title-1">Browse My</h2>
+      <h1 class="proj_title">Projects</h1>
+      <div class="projects__container container grid">
+        <article class="projects__card">
+          <div class="projects__image">
+            <img src="./assets/cleaning website.png" width="300" height="250" alt="1st_proj_img" class="projects">
+            <a href="#" class="projects__button button">
+              <i class="ri-arrow-right-up-line"></i>
+            </a>
+          </div>
+
+          <div class="projects__content">
+            <h3 class="projects__subtitle">Website</h3>
+            <h2 class="projects__title">Cleaning Services Website</h2>
+
+            <p class="projects__description">
+              using HTML, CSS, and JavaScript, the frontend is designed for an intuitive user interface and seamless navigation. It's optimized for responsiveness, ensuring a consistent experience across devices, be it desktops, tablets, or smartphones.
+            </p>
+          </div>
+          <div class="projects__buttons">
+            <a href=""  target="_blank" class="projects__link">
+            <i class="ri-github-line"></i>
+            </a>
+            <a href=""  target="_blank" class="projects__link">
+              <i class="dribble-line"></i> View
+            </a>
+          </div>
+        </article>
+
+        <article class="projects__card">
+          <div class="projects__image">
+            <img src="./assets/shooting_game.png" width="300" height="250" alt="2nd_proj_img" class="projects">
+            <a href="#" class="projects__button button">
+              <i class="ri-arrow-right-up-line"></i>
+            </a>
+          </div>
+
+          <div class="projects__content">
+            <h3 class="projects__subtitle">Game</h3>
+            <h2 class="projects__title">Simple Shooting Game</h2>
+
+            <p class="projects__description">
+              A simple shooting space game in C. The player controls a spaceship to shoot at enemies, avoiding collisions. The game includes scoring, levels, and a game-over condition when the player loses. The code handles user input for control and shooting.
+            </p>
+          </div>
+          <div class="projects__buttons">
+            <a href=""  target="_blank" class="projects__link">
+            <i class="ri-github-line"></i>
+            </a>
+            <a href=""  target="_blank" class="projects__link">
+              <i class="dribble-line"></i> View
+            </a>
+          </div>
+        </article>        
+        
+        <article class="projects__card">
+          <div class="projects__image">
+            <img src="./assets/atm.png" width="300" height="250" alt="1st_proj_img" class="projects">
+            <a href="#" class="projects__button button">
+              <i class="ri-arrow-right-up-line"></i>
+            </a>
+          </div>
+
+          <div class="projects__content">
+            <h3 class="projects__subtitle"> System</h3>
+            <h2 class="projects__title">ATM Simulation System</h2>
+
+            <p class="projects__description">
+              An ATM Simulation program in C++ emulates the functionality of a real-world Automated Teller Machine (ATM). It allows users to perform various banking operations, including withdrawing cash, depositing funds, checking account balances, and transferring money between accounts.            </p>
+          </div>
+          <div class="projects__buttons">
+            <a href=""  target="_blank" class="projects__link">
+            <i class="ri-github-line"></i>
+            </a>
+            <a href=""  target="_blank" class="projects__link">
+              <i class="dribble-line"></i> View
+            </a>
+          </div>
+        </article>       
+      </div>
+      </div>
+    </div>
+      </h2>
+      <section id="contact">
+        <h1 class="title_cont">Contact Me!</h1>
+        <div class="contact-container">
+          <div class="contact-form">
+            <form id="contactForm" action="mailto:lorenacagang278@gmail.com" method="post" enctype="text/plain">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+              <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+              <button type="submit" class="btn btn-color-2">Send Me a Message</button>
+            </form>
+          </div>
+          <div class="social-links">
+            <table>
+              <tr>
+                <td><a href="https://www.instagram.com/lorenacagang/" target="_blank"><img src="./assets/instagram.png" alt="Instagram"></a></td>
+              </tr>
+              <tr>
+                <td><a href="https://www.facebook.com/lorenatizoncagang/" target="_blank"><img src="./assets/facebook.png" alt="Facebook"></a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/LorenaCagang" target="_blank"><img src="./assets/github.png" alt="GitHub"></a></td>
+              </tr>
+            </table>
+            
+          </div>
+        </div>
+      </section>
+      
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Lorena Cagang. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
