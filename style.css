@@ -1,19 +1,26 @@
 /* Whole HTML Document */
 @import url('https://fonts.googleapis.com/css2?family=Domine&family=IBM+Plex+Sans+Arabic:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@700&family=Domine&family=Homemade+Apple&family=IBM+Plex+Sans+Arabic:wght@300&family=Kaushan+Script&family=Prosto+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+
+  box-sizing: border-box;
 }
 
+html, body {
+  overflow: visible;
+}
 
 body {
   font-family: 'Domine', serif;
-  background-image: url(assets/background.jpg);/*linear-gradient(to right, rgba(36, 20, 104,1), rgba(147,125,194,1));*/
-
+  background-image: url(assets/background.jpg);
   background-repeat: no-repeat;
+  overflow-x: hidden;
   background-attachment: fixed;
-    overflow-x: hidden; /* This hides horizontal overflow */
+  max-width: 100%;
+  position: relative;
 }
 
 html {
@@ -36,23 +43,19 @@ a,
   display: flex;
 }
 
-
 nav {
   justify-content: space-around;
   align-items: center;
   height: 10vh;
   overflow: hidden;
   background-color: rgba(19, 14, 16, 0.295);
-  width: 100%;
-  padding: 0.625rem 0 0.3125rem 0.625rem; /* assuming base font size is 16px */
-
+  padding: 0.6rem 0 0.3rem 0.6rem; 
 }
 .nav-links {
-
   padding-left: 3%;
   gap: 2rem;
   list-style: none;
-  font-size: 1.2rem;
+  font-size: 1.2rem; 
  
 }
 
@@ -87,7 +90,7 @@ a:hover::before {
 }
 .logo {
   float: right;
-  margin: -0.125rem 3.75rem 0 0;
+  margin: -0.9rem 3.75rem 0 0;
 }
 
 .logo a {
@@ -109,8 +112,8 @@ a:hover::before {
 }
 
 .hamburger-menu {
-  position: relative;
   display: inline-block;
+  padding-left: 4%;
 }
 
 .hamburger-icon {
@@ -120,6 +123,7 @@ a:hover::before {
   height: 1.5rem;
   width: 1.875rem;
   cursor: pointer;
+ 
 }
 
 .hamburger-icon span {
@@ -131,14 +135,19 @@ a:hover::before {
 
 .menu-links {
   position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: white;
+  top: 13%;
+  right: 84%;
+  background-color:rgba(97, 84, 89, 0.295);
+  color: white;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 
+}
+.menu-links a:hover {
+  background-color: rgba(234, 17, 121, 0.3);
+  color: black;
 }
 
 .menu-links a {
@@ -187,7 +196,7 @@ a:hover::before {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  height: 100vh;
   margin: 0 1.25rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -199,25 +208,45 @@ section {
 .section__text__home {
   text-align: center;
   font-size: 1.2rem;
-  color: rgb(128, 64, 64);
+  color: rgb(17, 15, 15);
 }
 
 /* Profile Section */
 
 #profile {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 3.125rem;
-  height: 5rem;
+  height: 100%;
+}
+/* Add these styles to your CSS */
+/* Add these styles to your CSS */
+.transition-enabled {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-.prof__section__pic-container {
-  display: flex;
-  height: 20.5625rem;
-  width: 20.5625rem;
-  margin: auto 0;
-  padding-left: 0%;
+.transition-enabled.show {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* You can adjust the cubic-bezier values to customize the easing */
+
+#profile img{
+  height: 25rem;
+  padding-right: 1%;
+}
+.prof__section__pic-container img {
+  height: 21rem;
+  width: 21rem;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 9%;
+}
+
 .section__pic-container {
   display: flex;
   height: 1.5625rem;
@@ -252,7 +281,7 @@ section {
   font-size: 5rem;
   font-weight: bolder;
   color: rgb(201, 56, 85);
-  text-align: center;
+  
 }
 
 .Title h2 {
@@ -260,12 +289,13 @@ section {
   font-size: 5rem;
   font-weight: bolder;
   color: white;
-  text-align: center;
+ 
 }
 
 .Title {
   display: flex;
   gap: 2rem;
+  justify-content: center;
 }
 
 .title {
@@ -327,30 +357,23 @@ section {
 
 #about {
   position: relative;
+  background-color: #0f0f0fc2;
+  width: 100%;
+  margin: 0;
 }
 
 #about::before {
   content: '';
   position: absolute;
-  background-size: auto;
-  top: -0.3125rem;
-  left: -11.25rem;
-  right: -10.625rem;
-  bottom: -0.625rem;
   background-color: #0f0f0fc2;
   z-index: -1;
-}
-
-.about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
 .about-details-container {
   justify-content: center;
   flex-direction: column;
   flex-basis: 60%;
+  padding-top: 3.5rem;
 }
 
 .about-containers,
@@ -361,8 +384,8 @@ section {
 .about-pic {
   border-radius: 2rem;
   margin: 0.25rem 2rem;
-  height: 31.25rem;
-  width: 21.875rem;
+  height: 29.5rem;
+  
 }
 
 .details-container {
@@ -376,7 +399,10 @@ section {
 
 .subtitle {
   display: flex;
-  margin: 1.25rem 0 2.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+  padding-left: 7%;
+  gap: 2.5rem;
 }
 
 .sub_1 {
@@ -393,7 +419,7 @@ section {
   position: relative;
   border: 0.125rem solid transparent;
 }
-
+ 
 .sub_experience:hover {
   border-color: rgb(209, 120, 120);
   background: rgba(53, 53, 53, 0.5);
@@ -419,7 +445,11 @@ section {
 }
 .abtme {
   text-align: justify;
+  min-width: 0;
+  overflow-wrap: break-word;
+  margin-right: 2rem;
 }
+
 
 .content_education {
   margin: 3.75rem 7.5rem;
@@ -451,28 +481,17 @@ section {
   margin: auto 0;
 }
 
-.exp_icon {
-  right: 35.1875rem;
-  bottom: 3.4375rem;
-  size: 5%;
-  position: absolute;
-  opacity: 1;
-}
 
-.educ_icon {
-  right: 20.4375rem;
-  bottom: 3.4375rem;
-  size: 5%;
-  position: absolute;
-}
 
 .iconss {
-  display: block;
-}
-
-.iconss {
+  display: flex;
+  justify-content: center;
+  gap: 6.5rem;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  
 }
 
 .sub_1:hover .iconss {
@@ -497,7 +516,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(119, 119, 119);
+  color: rgb(17, 17, 17);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -508,6 +527,7 @@ section {
   justify-content: center;
   flex-direction: column;
   padding-left: 12.5%;
+  padding-right: 10%;
   padding-top: -100%;
   width: 56.25rem;
 }
@@ -516,7 +536,7 @@ section {
   writing-mode: vertical-lr;
   color: #D3756B;
   font-size: 1.5rem;
-  margin-right: -39.75%;
+  padding-left: 5.75%;
 }
 .title_exp {
   writing-mode: vertical-lr;
@@ -526,8 +546,8 @@ section {
   text-align: start;
   color: white;
   text-align: center;
-  letter-spacing: 1rem;
-  margin-left: 42.5%;
+  letter-spacing: 0.5rem;
+  margin-left: 0.5%;
 }
 
 .section__text__Exp, .title_exp {
@@ -540,12 +560,13 @@ section {
 
 
 #contact {
-  background-color: #2e2525c0;
-  margin: 5% -0.5%;
+  background-color: #0f0f0fc2;
   width: 100%;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease-in-out;
+  margin-left: 0;
+  margin-bottom: 2rem;
+  height: 90vh;
 }
 
 .title_cont {
@@ -556,66 +577,99 @@ section {
 }
 
 .contact-container {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 2rem 0 2rem;
+  max-width: 100%;
+ 
+  
 }
-
 .contact-form {
-  width: 60%;
+  width: 50%;
   background-color: rgb(26, 24, 24);
-  padding: 4rem;
+  padding: 3rem;
   border-radius: 1.2rem;
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.76);
-  margin: 2rem;
+  max-width: 100%;
+  margin-bottom: 2rem;
 }
 
 .contact-form form {
   display: flex;
   flex-direction: column;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-  margin-bottom: 0.9375rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
 }
 
 .contact-form button {
-  width: auto;
+  width: 7rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-  margin-bottom: 1.25rem;
-  width: 70%;
-  font-size: 0.9375rem;
+  width: 100%;
+  font-size: 1rem;
 }
+
+.contact-form input[type="text"]:hover,
+.contact-form input[type="email"]:hover,
+.contact-form textarea:hover {
+  border-color: #D3756B; 
+}
+
+.contact-form button:hover {
+  background-color: #D3756B; 
+  color: white; 
+}
+
 
 .contact-form textarea {
-  height: 6.25rem;
+  height: 6rem;
 }
-
+.contact-container, .social-links{
+  gap: 5rem;
+  max-width: auto;
+}
 .social-links {
   display: flex;
   align-items: center;
 }
-
+.contact-form,
+.social-links {
+  box-sizing: border-box; 
+  gap: 0;
+  margin: 0;
+}
 .social-links td {
   padding: 0.625rem;
 }
 
 .social-links td img {
-  width: 2.1875rem;
-}
-
-#contact:hover {
-  background-color: #09092c79;
+  width: 2.5rem;
 }
 
 footer {
-  height: 20vh;
-  margin: 0 1rem;
+  display: block;
+  height: 10vh;
+}
+.nav-links-container{
+  padding-left: 10rem;  
+  margin-bottom: 4rem;
+}
+nav{
+  height: 12vh;
+}
+footer .nav-links{
+  gap: 8rem;
+}
+footer p{
+  margin: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
 }
 
 .skill {
@@ -692,6 +746,11 @@ footer {
   text-align: center;
  
 }
+.projects__section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 .section__title-1 {
   font-size: 1rem;
@@ -704,18 +763,17 @@ footer {
 }
 
 .projects__card {
-  padding: 1rem 1rem 2rem;
   transition: background-color 0.4s;
-  margin: 0 0 0 -.5%;
- 
+  margin: 0 2rem 0 2rem;
+  
 }
 
 .projects__image {
   position: relative;
   margin-top: 0.46875rem;
   border-radius: 0.125rem;
+  margin-bottom: 2rem;
 }
-
 .projects__button {
   position: absolute;
   right: 1rem;
@@ -740,7 +798,7 @@ footer {
   font-weight: 1000;
   color: rgb(184, 113, 184);
   margin-bottom: 0.75rem;
-  padding-left: 1.75rem;
+  padding-left: 0rem;
 }
 
 .projects__title {
@@ -785,19 +843,15 @@ footer {
   grid-template-columns: repeat(3, 22rem);
   padding-block: 3rem 1rem;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
   gap: 6rem;
+  
 }
 
-.projects__card {
-  padding: 1.25rem 1.25rem 2.5rem;
-}
 
-.projects__image {
-  margin-bottom: 1rem8
-  margin-bottom: 2rem;
-}
+
 
 .projects__button {
   right: 1.25rem;
